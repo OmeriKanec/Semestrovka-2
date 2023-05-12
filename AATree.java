@@ -144,59 +144,5 @@ public class AATree {
         }
         return false;
     }
-
-
-
-
-
-
-
-
-
-    static void inorder(Node root)
-    {
-        if (root != null) {
-            inorder(root.left);
-            System.out.print(" " + root.value);
-            inorder(root.right);
-        }
-    }
-    public static void main(String[] args)
-    {
-
-        /* Let us create following BST
-                50
-             /     \
-            30      70
-           /  \    /  \
-         20   40  60   80
-     */
-        AATree t = new AATree();
-
-        t.insert(50);
-        // inserting value 30
-        t.root = t.insert(t.root, 30);
-
-        // inserting value 20
-        t.root = t.insert(t.root, 20);
-
-        // inserting value 40
-        t.root = t.insert(t.root, 40);
-
-        // inserting value 70
-        t.root = t.insert(t.root, 70);
-
-        // inserting value 60
-        t.root = t.insert(t.root, 60);
-
-        // inserting value 80
-        t.root = t.insert(t.root, 80);
-
-        // Function Call
-        t.delete(60);
-        t.root = t.delete(t.root, 80);
-        System.out.println(t.contains(t.root, 20));
-        t.inorder(t.root);
-    }
 }
 
